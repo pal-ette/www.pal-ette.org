@@ -1,0 +1,40 @@
+---
+title: Pal-ette
+description: AI & Data Science Projects
+template: splash
+hero:
+  tagline: 우리는 더 나은 삶을 위한 AI 기반 애플리케이션을 만듭니다.
+  image:
+    file: ../../assets/logo.png
+  actions:
+    - text: GitHub 방문하기
+      link: https://github.com/pal-ette
+      icon: external
+      variant: primary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 프로젝트
+
+<CardGrid stagger>
+	<Card title="iNotePal" icon="pencil">
+		AI와 대화를 통한 매일 감정 기록 노트.
+        <br/>
+        [문서 보기](/inotepal)
+	</Card>
+	<Card title="iPetPal" icon="magnifier">
+		사진기반 반려동물 질병검사 애플리케이션.
+        <br/>
+        [문서 보기](/ipetpal) | [APK 다운로드](https://github.com/pal-ette/iPetPal/releases/tag/apk-1)
+	</Card>
+    <Card title="reflex-wordcloud" icon="puzzle">
+        React wordcloud를 래핑한 Reflex 커스텀 컴포넌트.
+        <br/>
+        [문서 보기](/reflex-wordcloud) | [PyPI](https://pypi.org/project/reflex-wordcloud/)
+    </Card>
+</CardGrid>
+
+import TeamInfo from '../../components/TeamInfo.astro';
+
+<TeamInfo />

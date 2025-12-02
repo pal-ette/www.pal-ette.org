@@ -1,0 +1,13 @@
+:root {
+	/* Dark Mode */
+	--sl-color-accent-low: #103830;
+	--sl-color-accent: #1A947A;
+	--sl-color-accent-high: #b2dfdb;
+}
+
+[data-theme='light'] {
+	/* Light Mode */
+	--sl-color-accent-low: #e0f2f1;
+	--sl-color-accent: #1A947A;
+	--sl-color-accent-high: #004d40;
+}

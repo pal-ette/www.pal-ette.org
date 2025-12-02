@@ -1,0 +1,29 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import DefaultHead from "@astrojs/starlight/components/Head.astro";
+
+const { starlightRoute } = Astro.locals;
+const entry = starlightRoute?.entry;
+let renderedTitle;
+
+if (entry) {
+    const slug = entry.slug;
+    let appName = "";
+
+    if (slug.startsWith("inotepal")) {
+        appName = "iNotePal";
+    } else if (slug.startsWith("ipetpal")) {
+        appName = "iPetPal";
+    } else if (slug.startsWith("reflex-wordcloud")) {
+        appName = "reflex-wordcloud";
+    }
+
+    if (appName) {
+        // Render custom title: Page Name | App Name | Pal-ette
+        renderedTitle = `${entry.data.title} | ${appName} | Pal-ette`;
+    }
+}
+---
+
+{renderedTitle && <title>{renderedTitle}</title>}
+<DefaultHead {...Astro.props} />
